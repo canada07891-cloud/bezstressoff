@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Полезная информация от психологического пространства bezstressoff.ru: статьи, материалы и анонсы мероприятий.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#4A90E2">
+
+  <title>Полезная информация — Психологическое пространство bezstressoff.ru</title>
+  <style>
+    .page-header {
+      padding: calc(var(--header-height) + var(--spacing-3xl)) 0 var(--spacing-3xl);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: var(--color-text-light);
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--spacing-md);
+    }
+    .page-header p {
+      font-size: var(--font-size-lg);
+      opacity: .9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Quick jump */
+    .info-jump {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-md);
+      flex-wrap: wrap;
+      padding: var(--spacing-2xl) 0 0;
+    }
+    .info-jump a {
+      padding: var(--spacing-sm) var(--spacing-xl);
+      border-radius: var(--radius-full);
+      border: 2px solid var(--color-border);
+      color: var(--color-text-primary);
+      font-weight: var(--font-weight-medium);
+      transition: all var(--transition-fast);
+    }
+    .info-jump a:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .info-section {
+      padding: var(--spacing-3xl) 0 var(--spacing-4xl);
+    }
+    .info-section:nth-child(even) {
+      background: var(--color-bg-secondary);
+    }
+    .info-section__head {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto var(--spacing-2xl);
+    }
+    .info-section__head h2 {
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    .info-section__head p {
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-lg);
+    }
+
+    /* Post / event cards — ready-made template for future content */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-xl);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .info-card {
+      background: var(--color-bg-primary);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-base);
+    }
+    .info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+    }
+    .info-card__photo {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+    }
+    .info-card__body {
+      padding: var(--spacing-xl);
+    }
+    .info-card__date {
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: var(--spacing-sm);
+    }
+    .info-card__title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-text-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    .info-card__text {
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-relaxed);
+      font-size: var(--font-size-sm);
+    }
+
+    /* Empty state, shown until real posts/events are added */
+    .empty-state {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      padding: var(--spacing-3xl) var(--spacing-xl);
+      background: var(--color-bg-primary);
+      border: 2px dashed var(--color-border);
+      border-radius: var(--radius-xl);
+    }
+    .info-section:nth-child(even) .empty-state {
+      background: var(--color-bg-secondary);
+    }
+    .empty-state__icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto var(--spacing-lg);
+      color: var(--color-primary);
+    }
+    .empty-state p {
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: var(--font-size-3xl); }
+      .info-section { padding: var(--spacing-2xl) 0 var(--spacing-3xl); }
+    }
+  </style>
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(51499454, "init", {id:51499454,clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+  </script>
+  <script type="module" crossorigin src="/assets/main-KCAEqh5A.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CfymtNBB.css">
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/51499454" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="/" class="header__logo"><span class="header__logo-text">bezstressoff.ru</span></a>
+        <nav class="header__nav" id="nav">
+          <ul class="header__nav-list">
+            <li><a href="/" class="header__nav-link">Главная</a></li>
+            <li><a href="services.html" class="header__nav-link">Услуги</a></li>
+            <li><a href="concept.html" class="header__nav-link">Концепция</a></li>
+            <li><a href="info.html" class="header__nav-link">Полезная информация</a></li>
+            <li><a href="/#contacts" class="header__nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <a href="https://www.instagram.com/psybreakfast" class="header__social" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <a href="tel:+79773768610" class="header__phone">+7 (977) 376-86-10</a>
+          <button class="btn btn--primary" id="consultBtn">Консультация</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Полезная информация</h1>
+      <p>Статьи и материалы по психологии, а также анонсы предстоящих мероприятий</p>
+    </div>
+  </section>
+
+  <div class="info-jump">
+    <a href="#posts">Статьи</a>
+    <a href="#events">Мероприятия</a>
+  </div>
+
+  <!-- Posts -->
+  <section class="info-section" id="posts">
+    <div class="container">
+      <div class="info-section__head">
+        <h2>Статьи</h2>
+        <p>Статьи и материалы по психологии</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="empty-state">
+          <svg class="empty-state__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <p>Статьи и практики на сайте появятся скоро. А пока актуальные материалы и заметки я публикую в Instagram — заглядывайте.</p>
+          <a href="https://www.instagram.com/psybreakfast" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">Смотреть в Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="info-section" id="events">
+    <div class="container">
+      <div class="info-section__head">
+        <h2>Мероприятия</h2>
+        <p>Анонсы и фотографии с программ</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="empty-state">
+          <svg class="empty-state__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <p>Ближайшие мероприятия пока не запланированы. Анонсы и фото с программ появятся здесь.</p>
+          <a href="/#contacts" class="btn btn--secondary">Узнать о новых датах</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--spacing-4xl) 0; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: white; text-align: center;">
+    <div class="container">
+      <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--spacing-lg);">Готовы начать работу?</h2>
+      <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-xl); opacity: 0.9;">Запишитесь на консультацию</p>
+      <button class="btn btn--large" style="background: white; color: var(--color-primary);" id="ctaBtn">Записаться на консультацию</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <h3>Психологическое пространство bezstressoff.ru</h3>
+          <p>Мы дарим крылья Вашей мечте</p>
+        </div>
+        <div class="footer__links">
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="concept.html">Концепция</a></li>
+            <li><a href="info.html">Полезная информация</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Контакты</h4>
+          <p>Москва, ул. Кравченко, д. 11</p>
+          <p><a href="tel:+79773768610">+7 (977) 376-86-10</a></p>
+          <p><a href="mailto:bezstressoff@gmail.com">bezstressoff@gmail.com</a></p>
+          <a href="https://www.instagram.com/psybreakfast" class="footer__social" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            @psybreakfast
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Психологическое пространство bezstressoff.ru. Все права защищены.</p>
+        <p><a href="/">bezstressoff.ru</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+</body>
+</html>
