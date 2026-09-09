@@ -314,8 +314,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-text-prima
   border-radius: 50%;
   filter: blur(70px);
 }
-.hero__blob--1 { width: 480px; height: 480px; top: -160px; right: -140px; background: var(--color-primary-light); opacity: .25; }
-.hero__blob--2 { width: 360px; height: 360px; bottom: -140px; left: -110px; background: var(--color-secondary); opacity: .18; }
+.hero__blob--1 { width: 480px; height: 480px; top: -160px; right: -140px; background: var(--color-primary-light); opacity: .22; animation: heroBreatheA 9s ease-in-out infinite; }
+.hero__blob--2 { width: 360px; height: 360px; bottom: -140px; left: -110px; background: var(--color-secondary); opacity: .15; animation: heroBreatheB 11s ease-in-out infinite 1.5s; }
+@keyframes heroBreatheA { 0%, 100% { transform: scale(1); opacity: .22; } 50% { transform: scale(1.16); opacity: .32; } }
+@keyframes heroBreatheB { 0%, 100% { transform: scale(1); opacity: .15; } 50% { transform: scale(1.14); opacity: .24; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero__blob--1, .hero__blob--2 { animation: none; }
+}
 .hero__inner {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
@@ -323,7 +328,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-text-prima
   align-items: center;
 }
 .hero__content { animation: fadeInUp .8s ease-out; }
-.hero__eyebrow { font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); letter-spacing: .12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--spacing-lg); display: block; }
 .hero__title {
   font-size: var(--font-size-5xl);
   font-weight: var(--font-weight-medium);
@@ -334,6 +338,24 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-text-prima
 .hero__title em { font-style: italic; color: var(--color-primary); }
 .hero__text { font-size: var(--font-size-lg); line-height: var(--line-height-relaxed); color: var(--color-text-secondary); margin-bottom: var(--spacing-2xl); max-width: 480px; }
 .hero__cta { display: flex; gap: var(--spacing-md); flex-wrap: wrap; }
+.hero__cta .btn--primary { position: relative; }
+.hero__cta .btn--primary:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1.5px solid var(--color-primary);
+  opacity: 0;
+  pointer-events: none;
+  animation: heroPulseRing 3.2s ease-out infinite;
+}
+@keyframes heroPulseRing {
+  0% { opacity: .55; transform: scale(1); }
+  70%, 100% { opacity: 0; transform: scale(1.22); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__cta .btn--primary:after { animation: none; }
+}
 
 .hero__photo-wrap { position: relative; animation: fadeIn 1s ease-out .2s both; }
 .hero__photo-wrap:before {
@@ -345,6 +367,15 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-text-prima
   border-radius: var(--radius-xl);
   transform: rotate(-6deg);
   z-index: 0;
+}
+.hero__photo-glow {
+  position: absolute;
+  inset: -10%;
+  background: radial-gradient(circle at 60% 35%, var(--color-primary-light) 0%, transparent 60%);
+  opacity: .35;
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
 }
 .hero__photo {
   position: relative;
@@ -360,13 +391,26 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-text-prima
   z-index: 2;
   left: -8%;
   bottom: -6%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
   background: var(--color-bg-primary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md) var(--spacing-lg);
   box-shadow: var(--shadow-lg);
-  max-width: 230px;
+  max-width: 300px;
 }
+.hero__caption strong { white-space: nowrap; }
+.hero__caption-badge {
+  flex-shrink: 0;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--color-bg-accent);
+  color: var(--color-primary);
+  display: flex; align-items: center; justify-content: center;
+}
+.hero__caption-badge svg { width: 18px; height: 18px; }
 .hero__caption strong { font-family: var(--font-display); font-size: var(--font-size-lg); display: block; }
 .hero__caption span { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
 

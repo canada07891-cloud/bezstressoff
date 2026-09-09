@@ -52,7 +52,6 @@ export default function HomePage() {
         <div className="container">
           <div className="hero__inner">
             <div className="hero__content">
-              <span className="hero__eyebrow">Психологическое пространство</span>
               <h1 className="hero__title">
                 Дарю крылья<br /><em>вашей мечте</em>
               </h1>
@@ -72,6 +71,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="hero__photo-wrap">
+              <span className="hero__photo-glow" aria-hidden="true" />
               <Image
                 src={`${BASE_PATH}/assets/concept-about-me.jpg`}
                 alt="Марина Сидорова"
@@ -81,8 +81,15 @@ export default function HomePage() {
                 className="hero__photo"
               />
               <div className="hero__caption">
-                <strong>Марина Сидорова</strong>
-                <span>Клинический психолог, психотерапевт</span>
+                <span className="hero__caption-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Марина Сидорова</strong>
+                  <span>Клинический психолог, психотерапевт</span>
+                </div>
               </div>
             </div>
           </div>
