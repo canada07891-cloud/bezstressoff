@@ -463,6 +463,31 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-text-prima
 .concept-card__link:hover { gap: var(--spacing-md); }
 .concept__cta { text-align: center; }
 
+@media (max-width: 768px) {
+  /* A 4-up photo grid stacked vertically means ~2000px of scrolling just to
+     get through the "quick overview" section — the opposite of quick. A
+     swipeable, snapping horizontal strip (cards peeking at the edge as an
+     affordance to swipe) keeps it fast and feels native on a phone. */
+  .concept__grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: var(--spacing-md);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: var(--spacing-md);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 calc(var(--spacing-md) * -1) var(--spacing-2xl);
+    padding: 0 var(--spacing-md) var(--spacing-sm);
+  }
+  .concept__grid::-webkit-scrollbar { display: none; }
+  .concept-card {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+  .concept-card:hover { transform: none; }
+}
+
 /* ==========================================================================
    Contacts
    ========================================================================== */
@@ -515,6 +540,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-text-prima
 @media (max-width: 768px) {
   .footer__content { grid-template-columns: 1fr; gap: var(--spacing-xl); }
   .footer__bottom { flex-direction: column; gap: var(--spacing-sm); text-align: center; }
+  /* the fixed bottom tab bar permanently covers ~76px — without this the
+     copyright line is trapped underneath it with no way to scroll past */
+  .footer { padding-bottom: calc(76px + var(--spacing-xl) + env(safe-area-inset-bottom)); }
 }
 
 /* ==========================================================================
