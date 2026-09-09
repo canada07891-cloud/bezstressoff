@@ -3,11 +3,12 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
 import HeroCta from "@/components/HeroCta";
+import { BASE_PATH } from "@/lib/site";
 
 const CONCEPT_CARDS = [
   {
     href: "/concept",
-    photo: "/assets/concept-about-me.jpg",
+    photo: `${BASE_PATH}/assets/concept-about-me.jpg`,
     alt: "Марина Сидорова",
     title: "Обо мне",
     text: "Марина Сидорова — клинический психолог, психотерапевт, к.п.н. В профессии с 2000 года.",
@@ -15,7 +16,7 @@ const CONCEPT_CARDS = [
   },
   {
     href: "/services#individual",
-    photo: "/assets/concept-individual.jpg",
+    photo: `${BASE_PATH}/assets/concept-individual.jpg`,
     alt: "Индивидуальная консультация",
     title: "Индивидуальная консультация",
     text: "Онлайн/офлайн. Работа с тяжелыми эмоциональными состояниями и травматическими событиями, изменение стратегий поведения и взглядов на жизнь.",
@@ -23,7 +24,7 @@ const CONCEPT_CARDS = [
   },
   {
     href: "/services#group",
-    photo: "/assets/concept-group.jpg",
+    photo: `${BASE_PATH}/assets/concept-group.jpg`,
     alt: "Групповая работа",
     title: "Групповая работа",
     text: "Безопасное пространство для самоисследования, выхода из шаблонов поведения, поддержки и развития.",
@@ -31,7 +32,7 @@ const CONCEPT_CARDS = [
   },
   {
     href: "/#contacts",
-    photo: "/assets/concept-supervision.jpg",
+    photo: `${BASE_PATH}/assets/concept-supervision.jpg`,
     alt: "Супервизия",
     title: "Супервизия",
     text: "Профессиональная работа со специалистами, обучение и сопровождение.",
@@ -72,7 +73,7 @@ export default function HomePage() {
             </div>
             <div className="hero__photo-wrap">
               <Image
-                src="/assets/concept-about-me.jpg"
+                src={`${BASE_PATH}/assets/concept-about-me.jpg`}
                 alt="Марина Сидорова"
                 width={480}
                 height={600}

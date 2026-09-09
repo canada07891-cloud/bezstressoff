@@ -25,6 +25,7 @@ export default function ContactForm() {
       </button>
       {status === "success" && <p className="form-status form-status--success">Спасибо! Сообщение отправлено, я скоро свяжусь с вами.</p>}
       {status === "error" && <p className="form-status form-status--error">Заполните имя и телефон или позвоните напрямую.</p>}
+      {status === "not-configured" && <p className="form-status form-status--error">Форма временно не настроена — позвоните или напишите напрямую, контакты ниже.</p>}
     </form>
   );
 }

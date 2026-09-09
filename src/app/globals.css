@@ -615,10 +615,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-text-prima
   color: var(--color-text-light);
   text-align: center;
   background-color: var(--color-ink);
-  background-image: linear-gradient(rgba(20, 17, 15, .5), rgba(20, 17, 15, .75)), url(/assets/bsbg-K7TW8f5a.png);
   background-size: cover, cover;
   background-position: center, center 35%;
   background-blend-mode: normal, soft-light;
+  /* background-image is set inline by CtaBand.tsx so the GitHub Pages
+     basePath prefix (not visible to plain CSS url()) is applied correctly */
 }
 .cta-band h2 { font-size: var(--font-size-3xl); margin-bottom: var(--spacing-md); color: var(--color-text-light); }
 .cta-band p { font-size: var(--font-size-lg); margin-bottom: var(--spacing-xl); opacity: .8; }

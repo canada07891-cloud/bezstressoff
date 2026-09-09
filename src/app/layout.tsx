@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import ConsultModal from "@/components/ConsultModal";
 import BackToTop from "@/components/BackToTop";
 import YandexMetrika from "@/components/YandexMetrika";
+import { BASE_PATH, SITE_URL } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,7 +23,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bezstressoff.ru"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Психологическое пространство bezstressoff.ru — Марина Сидорова",
     template: "%s — Психологическое пространство bezstressoff.ru",
@@ -39,15 +40,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Марина Сидорова" }],
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: `${BASE_PATH}/favicon.ico` },
+      { url: `${BASE_PATH}/icon-192.png`, sizes: "192x192", type: "image/png" },
+      { url: `${BASE_PATH}/icon-512.png`, sizes: "512x512", type: "image/png" },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: `${BASE_PATH}/apple-touch-icon.png`,
   },
   openGraph: {
     type: "website",
-    url: "https://bezstressoff.ru/",
+    url: SITE_URL,
     title: "Психологическое пространство bezstressoff.ru",
     description: "Индивидуальные консультации, групповая работа и супервизия с клиническим психологом Мариной Сидоровой.",
     images: ["/icon-512.png"],

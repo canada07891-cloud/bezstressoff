@@ -45,6 +45,7 @@ export default function ConsultModal() {
             </button>
             {status === "success" && <p className="form-status form-status--success">Спасибо! Заявка отправлена, я свяжусь с вами в ближайшее время.</p>}
             {status === "error" && <p className="form-status form-status--error">Проверьте поля или попробуйте позвонить напрямую.</p>}
+            {status === "not-configured" && <p className="form-status form-status--error">Форма временно не настроена — позвоните, пожалуйста, напрямую: +7 (977) 376-86-10.</p>}
           </form>
         </div>
       </div>
