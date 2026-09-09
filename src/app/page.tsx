@@ -54,7 +54,7 @@ export default function HomePage() {
             <div className="hero__content">
               <span className="hero__eyebrow">Психологическое пространство</span>
               <h1 className="hero__title">
-                Дарю вам крылья<br />для <em>вашей мечты</em>
+                Дарю крылья<br /><em>вашей мечте</em>
               </h1>
               <p className="hero__text">
                 Наш внутренний потенциал безграничен — это бесценный дар, который следует открыть в себе

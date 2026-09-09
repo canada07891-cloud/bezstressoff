@@ -28,7 +28,7 @@ export default function InfoPage() {
         <div className="container">
           <div className="info-section__head">
             <h2>Статьи</h2>
-            <p>Полноценные статьи на сайте появятся скоро. А пока — свежие посты прямо из Instagram</p>
+            <p>Статьи на сайте появятся скоро</p>
           </div>
 
           {/*
