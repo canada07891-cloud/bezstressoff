@@ -19,81 +19,17 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <meta name="theme-color" content="#4A90E2">
+  <meta name="theme-color" content="#FBF7F1">
 
   <title>Психологическое пространство bezstressoff.ru — Марина Сидорова</title>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- Styles -->
-  <style>
-    .concept {
-      padding: var(--spacing-4xl) 0;
-      background: var(--color-bg-secondary);
-    }
-    .concept__subtitle {
-      text-align: center;
-      max-width: 640px;
-      margin: calc(var(--spacing-2xl) * -1) auto var(--spacing-3xl);
-      font-size: var(--font-size-lg);
-      color: var(--color-text-secondary);
-    }
-    .concept__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: var(--spacing-xl);
-      margin-bottom: var(--spacing-3xl);
-    }
-    .concept-card {
-      background: var(--color-bg-primary);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      transition: all var(--transition-base);
-      display: flex;
-      flex-direction: column;
-    }
-    .concept-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-xl);
-    }
-    .concept-card__photo {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-    }
-    .concept-card__body {
-      padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-xl);
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .concept-card__title {
-      font-size: var(--font-size-lg);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-sm);
-    }
-    .concept-card__text {
-      color: var(--color-text-secondary);
-      line-height: var(--line-height-relaxed);
-      font-size: var(--font-size-sm);
-      margin-bottom: var(--spacing-lg);
-      flex: 1;
-    }
-    .concept-card__link {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--spacing-sm);
-      color: var(--color-primary);
-      font-weight: var(--font-weight-semibold);
-      transition: gap var(--transition-fast);
-    }
-    .concept-card__link:hover { gap: var(--spacing-md); }
-    .concept__cta { text-align: center; }
-    @media (max-width: 768px) {
-      .concept { padding: var(--spacing-2xl) 0; }
-      .concept__subtitle { margin-top: 0; }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/theme.css">
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -111,9 +47,6 @@
   </script>
   <!-- /Yandex.Metrika counter -->
   <script type="module" crossorigin src="/assets/main-KCAEqh5A.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-CfymtNBB.css">
-  <link rel="stylesheet" crossorigin href="/assets/main-f2cMERaZ.css">
-  <link rel="stylesheet" crossorigin href="/assets/services-I69oz7lL.css">
 </head>
 <body>
   <!-- Yandex.Metrika noscript -->
@@ -125,12 +58,6 @@
         <a href="/" class="header__logo" aria-label="Главная страница">
           <span class="header__logo-text">bezstressoff.ru</span>
         </a>
-
-        <button class="header__burger" id="burger" aria-label="Меню" aria-expanded="false">
-          <span class="header__burger-line"></span>
-          <span class="header__burger-line"></span>
-          <span class="header__burger-line"></span>
-        </button>
 
         <nav class="header__nav" id="nav">
           <ul class="header__nav-list">
@@ -159,37 +86,49 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero__bg"></div>
+    <div class="hero__bg">
+      <span class="hero__blob hero__blob--1"></span>
+      <span class="hero__blob hero__blob--2"></span>
+    </div>
     <div class="container">
-      <div class="hero__content">
-        <h1 class="hero__title">
-          Психологическое пространство<br>
-          <span class="hero__title-accent">bezstressoff.ru</span>
-        </h1>
-        <p class="hero__subtitle">Мы дарим крылья Вашей мечте</p>
-        <p class="hero__text">
-          Наш внутренний потенциал безграничен — это бесценный дар, который следует открыть в себе
-          и начать использовать для достижения счастья и успеха.
-        </p>
-        <div class="hero__cta">
-          <button class="btn btn--primary btn--large" id="heroBtn">Записаться на консультацию</button>
-          <a href="#intro" class="btn btn--secondary btn--large">Обо мне и работе</a>
+      <div class="hero__inner">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Психологическое пространство</span>
+          <h1 class="hero__title">Дарю вам крылья<br>для <em>вашей мечты</em></h1>
+          <p class="hero__text">
+            Наш внутренний потенциал безграничен — это бесценный дар, который следует открыть в себе
+            и начать использовать для достижения счастья и успеха.
+          </p>
+          <div class="hero__cta">
+            <button class="btn btn--primary btn--large" id="heroBtn">Записаться на консультацию</button>
+            <a href="#intro" class="btn btn--secondary btn--large">Обо мне и работе</a>
+          </div>
+          <div class="hero__scroll" aria-hidden="true">
+            <span>Листайте вниз</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hero__photo-wrap">
+          <img src="/assets/concept-about-me.jpg" alt="Марина Сидорова" class="hero__photo">
+          <div class="hero__caption">
+            <strong>Марина Сидорова</strong>
+            <span>Клинический психолог, психотерапевт · с 2000 года</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hero__scroll" aria-hidden="true">
-      <span>Листайте вниз</span>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
     </div>
   </section>
 
   <!-- Intro Section -->
   <section class="concept" id="intro">
     <div class="container">
-      <h2 class="section-title">Приветствую вас в пространстве bezstressoff.ru!</h2>
-      <p class="concept__subtitle">Кратко обо мне и о работе</p>
+      <div class="section-head">
+        <span class="eyebrow">bezstressoff.ru</span>
+        <h2 class="section-title">Приветствую вас в пространстве bezstressoff.ru!</h2>
+        <p>Кратко обо мне и о работе</p>
+      </div>
 
       <div class="concept__grid">
         <article class="concept-card">
@@ -248,7 +187,10 @@
   <!-- Contact Section -->
   <section class="contacts" id="contacts">
     <div class="container">
-      <h2 class="section-title">Контакты</h2>
+      <div class="section-head">
+        <span class="eyebrow">На связи</span>
+        <h2 class="section-title">Контакты</h2>
+      </div>
 
       <div class="contacts__grid">
         <div class="contacts__info">
@@ -322,7 +264,7 @@
     <div class="container">
       <div class="footer__content">
         <div class="footer__brand">
-          <h3>Психологическое пространство bezstressoff.ru</h3>
+          <h3>bezstressoff.ru</h3>
           <p>Мы дарим крылья Вашей мечте</p>
         </div>
         <div class="footer__links">

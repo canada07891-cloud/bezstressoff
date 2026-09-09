@@ -10,147 +10,16 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <meta name="theme-color" content="#4A90E2">
+  <meta name="theme-color" content="#FBF7F1">
 
   <title>Полезная информация — Психологическое пространство bezstressoff.ru</title>
-  <style>
-    .page-header {
-      padding: calc(var(--header-height) + var(--spacing-3xl)) 0 var(--spacing-3xl);
-      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-      color: var(--color-text-light);
-      text-align: center;
-    }
-    .page-header h1 {
-      font-size: var(--font-size-4xl);
-      margin-bottom: var(--spacing-md);
-    }
-    .page-header p {
-      font-size: var(--font-size-lg);
-      opacity: .9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
 
-    /* Quick jump */
-    .info-jump {
-      display: flex;
-      justify-content: center;
-      gap: var(--spacing-md);
-      flex-wrap: wrap;
-      padding: var(--spacing-2xl) 0 0;
-    }
-    .info-jump a {
-      padding: var(--spacing-sm) var(--spacing-xl);
-      border-radius: var(--radius-full);
-      border: 2px solid var(--color-border);
-      color: var(--color-text-primary);
-      font-weight: var(--font-weight-medium);
-      transition: all var(--transition-fast);
-    }
-    .info-jump a:hover {
-      border-color: var(--color-primary);
-      color: var(--color-primary);
-    }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    .info-section {
-      padding: var(--spacing-3xl) 0 var(--spacing-4xl);
-    }
-    .info-section:nth-child(even) {
-      background: var(--color-bg-secondary);
-    }
-    .info-section__head {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto var(--spacing-2xl);
-    }
-    .info-section__head h2 {
-      font-size: var(--font-size-3xl);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-sm);
-    }
-    .info-section__head p {
-      color: var(--color-text-secondary);
-      font-size: var(--font-size-lg);
-    }
-
-    /* Post / event cards — ready-made template for future content */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--spacing-xl);
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .info-card {
-      background: var(--color-bg-primary);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      transition: all var(--transition-base);
-    }
-    .info-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-xl);
-    }
-    .info-card__photo {
-      width: 100%;
-      aspect-ratio: 16/10;
-      object-fit: cover;
-    }
-    .info-card__body {
-      padding: var(--spacing-xl);
-    }
-    .info-card__date {
-      font-size: var(--font-size-sm);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-primary);
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      margin-bottom: var(--spacing-sm);
-    }
-    .info-card__title {
-      font-size: var(--font-size-lg);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-sm);
-    }
-    .info-card__text {
-      color: var(--color-text-secondary);
-      line-height: var(--line-height-relaxed);
-      font-size: var(--font-size-sm);
-    }
-
-    /* Empty state, shown until real posts/events are added */
-    .empty-state {
-      max-width: 640px;
-      margin: 0 auto;
-      text-align: center;
-      padding: var(--spacing-3xl) var(--spacing-xl);
-      background: var(--color-bg-primary);
-      border: 2px dashed var(--color-border);
-      border-radius: var(--radius-xl);
-    }
-    .info-section:nth-child(even) .empty-state {
-      background: var(--color-bg-secondary);
-    }
-    .empty-state__icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto var(--spacing-lg);
-      color: var(--color-primary);
-    }
-    .empty-state p {
-      color: var(--color-text-secondary);
-      font-size: var(--font-size-lg);
-      margin-bottom: var(--spacing-lg);
-    }
-
-    @media (max-width: 768px) {
-      .page-header h1 { font-size: var(--font-size-3xl); }
-      .info-section { padding: var(--spacing-2xl) 0 var(--spacing-3xl); }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/theme.css">
   <script type="text/javascript">
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -158,7 +27,6 @@
     ym(51499454, "init", {id:51499454,clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
   </script>
   <script type="module" crossorigin src="/assets/main-KCAEqh5A.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-CfymtNBB.css">
 </head>
 <body>
   <noscript><div><img src="https://mc.yandex.ru/watch/51499454" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -193,6 +61,7 @@
 
   <section class="page-header">
     <div class="container">
+      <span class="eyebrow">Материалы</span>
       <h1>Полезная информация</h1>
       <p>Статьи и материалы по психологии, а также анонсы предстоящих мероприятий</p>
     </div>
@@ -248,11 +117,11 @@
     </div>
   </section>
 
-  <section style="padding: var(--spacing-4xl) 0; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: white; text-align: center;">
+  <section class="cta-band">
     <div class="container">
-      <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--spacing-lg);">Готовы начать работу?</h2>
-      <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-xl); opacity: 0.9;">Запишитесь на консультацию</p>
-      <button class="btn btn--large" style="background: white; color: var(--color-primary);" id="ctaBtn">Записаться на консультацию</button>
+      <h2>Готовы начать работу?</h2>
+      <p>Запишитесь на консультацию</p>
+      <button class="btn btn--primary btn--large" id="ctaBtn">Записаться на консультацию</button>
     </div>
   </section>
 
@@ -260,7 +129,7 @@
     <div class="container">
       <div class="footer__content">
         <div class="footer__brand">
-          <h3>Психологическое пространство bezstressoff.ru</h3>
+          <h3>bezstressoff.ru</h3>
           <p>Мы дарим крылья Вашей мечте</p>
         </div>
         <div class="footer__links">

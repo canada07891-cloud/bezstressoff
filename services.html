@@ -11,178 +11,17 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <meta name="theme-color" content="#4A90E2">
+  <meta name="theme-color" content="#FBF7F1">
 
   <title>Услуги — Психологическое пространство bezstressoff.ru</title>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- Styles -->
-
-  <style>
-    /* Page-specific styles */
-    .page-header {
-      padding: calc(var(--header-height) + var(--spacing-3xl)) 0 var(--spacing-3xl);
-      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-      color: var(--color-text-light);
-      text-align: center;
-    }
-
-    .page-header h1 {
-      font-size: var(--font-size-4xl);
-      margin-bottom: var(--spacing-md);
-    }
-
-    .page-header p {
-      font-size: var(--font-size-lg);
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .service-detail {
-      padding: var(--spacing-4xl) 0;
-      background: var(--color-bg-secondary);
-    }
-
-    .service-detail:nth-child(even) {
-      background: var(--color-bg-primary);
-    }
-
-    .service-detail__content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .service-detail h2 {
-      font-size: var(--font-size-3xl);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-primary);
-      margin-bottom: var(--spacing-xl);
-      padding-bottom: var(--spacing-md);
-      border-bottom: 3px solid var(--color-primary);
-    }
-
-    .service-detail p {
-      font-size: var(--font-size-lg);
-      line-height: var(--line-height-relaxed);
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-lg);
-      text-align: left;
-    }
-
-    .service-detail__icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-      border-radius: var(--radius-full);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto var(--spacing-xl);
-      color: white;
-    }
-
-    .service-detail__icon svg {
-      width: 40px;
-      height: 40px;
-    }
-
-    .service-nav {
-      position: sticky;
-      top: calc(var(--header-height) + var(--spacing-md));
-      background: white;
-      padding: var(--spacing-lg);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md);
-      margin-bottom: var(--spacing-2xl);
-    }
-
-    .service-nav h3 {
-      font-size: var(--font-size-xl);
-      margin-bottom: var(--spacing-md);
-      color: var(--color-text-primary);
-    }
-
-    .service-nav ul {
-      list-style: none;
-    }
-
-    .service-nav li {
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .service-nav a {
-      display: block;
-      padding: var(--spacing-sm) var(--spacing-md);
-      color: var(--color-text-primary);
-      text-decoration: none;
-      border-radius: var(--radius-md);
-      transition: all var(--transition-fast);
-    }
-
-    .service-nav a:hover {
-      background: var(--color-bg-accent);
-      color: var(--color-primary);
-      padding-left: var(--spacing-lg);
-    }
-
-    .results {
-      padding: var(--spacing-4xl) 0;
-      background: var(--color-bg-secondary);
-    }
-    .results__box {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--color-bg-primary);
-      border-radius: var(--radius-xl);
-      padding: var(--spacing-3xl);
-      box-shadow: var(--shadow-lg);
-    }
-    .results__title {
-      font-size: var(--font-size-2xl);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-xl);
-      text-align: center;
-    }
-    .results__list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--spacing-lg);
-    }
-    .results__item {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--spacing-md);
-      font-size: var(--font-size-base);
-      color: var(--color-text-primary);
-    }
-    .results__item svg {
-      flex-shrink: 0;
-      width: 22px;
-      height: 22px;
-      color: var(--color-primary);
-      margin-top: 2px;
-    }
-
-    @media (max-width: 768px) {
-      .page-header h1 {
-        font-size: var(--font-size-3xl);
-      }
-
-      .service-detail {
-        padding: var(--spacing-2xl) 0;
-      }
-
-      .service-nav {
-        position: static;
-        margin-bottom: var(--spacing-xl);
-      }
-
-      .results__list {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/theme.css">
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -199,8 +38,6 @@
   </script>
   <!-- /Yandex.Metrika counter -->
   <script type="module" crossorigin src="/assets/main-KCAEqh5A.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-CfymtNBB.css">
-  <link rel="stylesheet" crossorigin href="/assets/services-I69oz7lL.css">
 </head>
 <body>
   <!-- Yandex.Metrika noscript -->
@@ -213,12 +50,6 @@
         <a href="/" class="header__logo" aria-label="Главная страница">
           <span class="header__logo-text">bezstressoff.ru</span>
         </a>
-
-        <button class="header__burger" id="burger" aria-label="Меню" aria-expanded="false">
-          <span class="header__burger-line"></span>
-          <span class="header__burger-line"></span>
-          <span class="header__burger-line"></span>
-        </button>
 
         <nav class="header__nav" id="nav">
           <ul class="header__nav-list">
@@ -248,23 +79,15 @@
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
-      <h1>Наши услуги</h1>
+      <span class="eyebrow">Форматы работы</span>
+      <h1>Услуги</h1>
       <p>Комплексная психологическая помощь для решения жизненных задач и достижения гармонии</p>
-    </div>
-  </section>
-
-  <!-- Quick Navigation -->
-  <section style="padding: var(--spacing-2xl) 0;">
-    <div class="container">
-      <div class="service-nav">
-        <h3>Перейти к разделу:</h3>
-        <ul>
-          <li><a href="#individual">Индивидуальные консультации</a></li>
-          <li><a href="#family">Семейное консультирование</a></li>
-          <li><a href="#group">Групповые программы</a></li>
-          <li><a href="#antistress">Антистрессовые программы</a></li>
-        </ul>
-      </div>
+      <nav class="service-nav" aria-label="Быстрый переход к разделу">
+        <a href="#individual">Индивидуальные консультации</a>
+        <a href="#family">Семейное консультирование</a>
+        <a href="#group">Групповые программы</a>
+        <a href="#antistress">Антистрессовые программы</a>
+      </nav>
     </div>
   </section>
 
@@ -417,11 +240,11 @@
   </section>
 
   <!-- CTA Section -->
-  <section style="padding: var(--spacing-4xl) 0; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: white; text-align: center;">
+  <section class="cta-band">
     <div class="container">
-      <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--spacing-lg);">Готовы начать работу?</h2>
-      <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-xl); opacity: 0.9;">Запишитесь на консультацию прямо сейчас</p>
-      <button class="btn btn--large" style="background: white; color: var(--color-primary);" id="ctaBtn">Записаться на консультацию</button>
+      <h2>Готовы начать работу?</h2>
+      <p>Запишитесь на консультацию прямо сейчас</p>
+      <button class="btn btn--primary btn--large" id="ctaBtn">Записаться на консультацию</button>
     </div>
   </section>
 
@@ -430,7 +253,7 @@
     <div class="container">
       <div class="footer__content">
         <div class="footer__brand">
-          <h3>Психологическое пространство bezstressoff.ru</h3>
+          <h3>bezstressoff.ru</h3>
           <p>Мы дарим крылья Вашей мечте</p>
         </div>
         <div class="footer__links">
