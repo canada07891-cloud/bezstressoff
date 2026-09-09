@@ -82,7 +82,7 @@ export default function HomePage() {
               />
               <div className="hero__caption">
                 <strong>Марина Сидорова</strong>
-                <span>Клинический психолог, психотерапевт · с 2000 года</span>
+                <span>Клинический психолог, психотерапевт</span>
               </div>
             </div>
           </div>
