@@ -30,7 +30,8 @@ jobs:
       - name: Build static export
         run: npm run build
         env:
-          NEXT_PUBLIC_GITHUB_PAGES: "true"
+          # unset: bezstressoff.ru is now the custom domain (public/CNAME),
+          # served from the root — no /bezstressoff/ basePath needed
           NEXT_PUBLIC_FORMSPREE_ENDPOINT: ${{ vars.FORMSPREE_ENDPOINT }}
 
       - uses: actions/configure-pages@v5

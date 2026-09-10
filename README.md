@@ -23,9 +23,14 @@ npm run lint    # проверка ESLint
 
 **Разово нужно включить Pages в настройках репозитория:** Settings → Pages → Source → **GitHub Actions**.
 
-Сайт живёт на `/bezstressoff/` (не в корне домена) — GitHub Pages отдаёт project-репозитории по пути `https://<username>.github.io/<repo>/`. Префикс пути (`BASE_PATH`) считается из `NEXT_PUBLIC_GITHUB_PAGES=true`, который выставляет сам workflow — руками его задавать не нужно.
+Сайт живёт на своём домене **bezstressoff.ru** (`public/CNAME`), собирается под корень. Если домен вдруг отвяжут и сайт снова нужно будет отдавать с `https://<username>.github.io/bezstressoff/`, верните в workflow `NEXT_PUBLIC_GITHUB_PAGES: "true"` — `BASE_PATH`/`SITE_URL` в `src/lib/site.ts` подхватят префикс автоматически.
 
-Если позже подключите свой домен (bezstressoff.ru): добавьте `public/CNAME` с доменом внутри, настройте DNS на GitHub Pages и уберите `NEXT_PUBLIC_GITHUB_PAGES`/`BASE_PATH` — тогда сайт будет собираться под корень, как раньше.
+**DNS у регистратора домена** (сделать один раз, руками — я до этого доступа не имею):
+- A-записи для `bezstressoff.ru` (apex) → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- (опционально) AAAA-записи → `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
+- (опционально) CNAME для `www` → `canada07891-cloud.github.io`, если нужен и `www.bezstressoff.ru`
+
+После прописывания DNS подождать распространения (обычно от нескольких минут до пары часов) — GitHub сам проверит домен и выпустит HTTPS-сертификат. Пока сертификат не готов, «Enforce HTTPS» в Settings → Pages может быть недоступен — это нормально, включится само.
 
 ## Форма записи → Formspree
 
