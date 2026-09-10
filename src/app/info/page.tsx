@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import InstagramFeed from "@/components/InstagramFeed";
+import EventSchedule from "@/components/EventSchedule";
 
 export const metadata: Metadata = {
   title: "Полезная информация",
@@ -50,20 +51,13 @@ export default function InfoPage() {
         <div className="container">
           <div className="info-section__head">
             <h2>Мероприятия</h2>
-            <p>Анонсы и фотографии с программ</p>
+            <p>Программа «Дом моей души» — 1–4 октября 2026</p>
           </div>
 
-          <div className="info-grid">
-            <div className="empty-state">
-              <svg className="empty-state__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" />
-                <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              <p>Ближайшие мероприятия пока не запланированы. Анонсы и фото с программ появятся здесь.</p>
-              <Link href="/#contacts" className="btn btn--secondary">Узнать о новых датах</Link>
-            </div>
+          <EventSchedule />
+
+          <div className="concept__cta">
+            <Link href="/#contacts" className="btn btn--secondary">Записаться и уточнить детали</Link>
           </div>
         </div>
       </section>
