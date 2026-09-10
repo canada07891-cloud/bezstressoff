@@ -16,14 +16,29 @@ export default function InfoPage() {
         <div className="container">
           <span className="eyebrow">Материалы</span>
           <h1>Полезная информация</h1>
-          <p>Статьи и материалы по психологии, а также анонсы предстоящих мероприятий</p>
+          <p>Анонсы предстоящих мероприятий, а также статьи и материалы по психологии</p>
         </div>
       </section>
 
       <div className="info-jump">
-        <a href="#posts">Статьи</a>
         <a href="#events">Мероприятия</a>
+        <a href="#posts">Статьи</a>
       </div>
+
+      <section className="info-section" id="events">
+        <div className="container">
+          <div className="info-section__head">
+            <h2>Мероприятия</h2>
+            <p>Программа «Дом моей души» — 1–4 октября 2026</p>
+          </div>
+
+          <EventSchedule />
+
+          <div className="concept__cta">
+            <Link href="/#contacts" className="btn btn--secondary">Записаться и уточнить детали</Link>
+          </div>
+        </div>
+      </section>
 
       <section className="info-section" id="posts">
         <div className="container">
@@ -43,21 +58,6 @@ export default function InfoPage() {
             <a href="https://www.instagram.com/psybreakfast" className="btn btn--secondary" target="_blank" rel="noopener noreferrer">
               Все посты в Instagram →
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="info-section" id="events">
-        <div className="container">
-          <div className="info-section__head">
-            <h2>Мероприятия</h2>
-            <p>Программа «Дом моей души» — 1–4 октября 2026</p>
-          </div>
-
-          <EventSchedule />
-
-          <div className="concept__cta">
-            <Link href="/#contacts" className="btn btn--secondary">Записаться и уточнить детали</Link>
           </div>
         </div>
       </section>
